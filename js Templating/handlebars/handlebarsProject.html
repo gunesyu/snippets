@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Handlebars Example</title>
+        
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="handlebars-v4.0.4.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+
+    </head>
+    <body>
+        <script type="text/x-handlebars-template" id="itemTemplate">
+            <div class="itemTemplateWrapper">
+                <div><span>Item: </span><span>{{item}}</span></div>
+                <div><span>Description: </span><span>{{description}}</span></div>
+                <div><span>Price: </span><span>{{price}}</span></div>
+            </div>
+        </script>
+        <h1>Simple Templates with Handlebars</h1>
+
+        <!-- This is the container where the templates will be instantiated -->
+        <div id="container"></div>
+
+        <!-- --------------------------------- -->
+
+        <script type="text/x-handlebars-template" id="itemTemplate2">
+            {{#each employees}}
+            <div class="itemTemplateWrapper2">
+                {{! This is a handlebars comment and it is totally ignored }}
+                <div>{{name}}</div>
+                <div>{{title}}</div>
+                <div>{{email}}</div>
+                <div>{{phone}}</div>
+                {{#if fulltime}}
+                    <div>Full-time employee</div>
+                {{else}}
+                    <div>Part-time employee</div>
+                {{/if}}
+            </div>
+            {{/each}}
+        </script>
+        <h1>Conditionals and Loops with Handlebars</h1>
+        <h3>Handlebars has support for basic logic built in ( "full-time || part-time" property )</h3>
+
+        <!-- This is the container where the templates will be instantiated -->
+        <div id="container2"></div>
+
+        <!-- --------------------------------- -->
+
+        <script type="text/x-handlebars-template" id="itemTemplate3">
+            <div class="itemTemplateWrapper3">
+                <div><span>Item: </span><span>{{item}}</span></div>
+                <div><span>Description: </span><span>{{description}}</span></div>
+                {{#with data}}
+                {{! instead of . notation, simply use this to reach inside data object}}
+                    <div><span>Price: </span><span>{{price}}</span></div>
+                    {{#unless inStock}}
+                        <div><span>We are currently out of this item.</span></div>
+                    {{/unless}}
+                {{/with}}
+            </div>
+        </script>
+        <h1>Helpers in Handlebars</h1>
+        <h3>Built in helpers ( #with in "price" and inside #unless in "inStock" (which is true now so we don't receive a message) )</h3>
+
+        <!-- This is the container where the templates will be instantiated -->
+        <div id="container3"></div>
+
+        <!-- --------------------------------- -->
+
+        <script type="text/x-handlebars-template" id="itemTemplate4">
+            <div class="itemTemplateWrapper4">
+                <div><span>Item: </span><span>{{item}}</span></div>
+                <div><span>Description: </span><span>{{description}}</span></div>
+                {{#with data}}
+                {{! instead of . notation, simply use this to reach inside data object}}
+                    <div><span>Price: </span><span>{{price}}</span></div>
+                    {{#unless inStock}}
+                        <div><span>We are currently out of this item.</span></div>
+                    {{/unless}}
+                {{/with}}
+                <div>{{prodQuantity data}}</div>
+            </div>
+        </script>
+        <h3>Custom helpers ( in "quantity" property which gives the info about stock )</h3>
+
+        <!-- This is the container where the templates will be instantiated -->
+        <div id="container4"></div>
+
+    </body>
+</html>

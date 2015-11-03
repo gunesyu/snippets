@@ -1,0 +1,12 @@
+body {
+	font-size: 10pt;
+}
+
+.itemTemplateWrapper, .itemTemplateWrapper2, .itemTemplateWrapper3, .itemTemplateWrapper4 {
+	border: 1px solid gray;
+	padding: 5pt;
+	margin-top: 10px;
+	width: auto;
+	display: block;
+}
+

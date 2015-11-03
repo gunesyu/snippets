@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dust Example</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="dust-full.js"></script>
+        <script type="text/javascript" src="dust-helpers.js"></script>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <script type="text/x-template" id="itemTemplate">
+            <div class="itemTemplateWrapper">
+              <div>{name}</div>
+              <div>{title}</div>
+              <div>{email}</div>
+              <div>{phone}</div>
+            </div>
+        </script>
+        <h1>Simple Template with Dust</h1>
+
+        <!-- This is the container where the templates will be instantiated -->
+        <div id="container"></div>
+
+        <!-- ------------------------------------------ -->
+
+        <script type="text/x-template" id="itemTemplate2">
+          <div>{company} Employees:</div>
+          {#employees prefix="Name"}
+            <div class="itemTemplateWrapper2">
+              <div>{prefix} : {name}</div>
+              <div>{title}</div>
+              <div>{email}</div>
+              <div>{phone}</div>
+            </div>
+            {:else}
+            <div>There are no employees</div>
+          {/employees}
+        </script>
+        <h1>Sections with a conditional in Dust</h1>
+        <h3>This example reads data from a json file with else statement if there are no employees and a prefix item as "Name :"</h3>
+
+        <!-- This is the container where the templates will be instantiated -->
+        <div id="container2"></div>
+
+        <!-- ------------------------------------------ -->
+
+        <script type="text/x-template" id="itemTemplate3">
+          {#employee}
+            <div class="itemTemplateWrapper3">
+              <div>{name}</div>
+              {#employee.department}
+                <div>{name}</div>
+                <div>{cost_center}</div>
+              {/employee.department}
+              <div>{title}</div>
+              <div>{email}</div>
+              <div>{phone}</div>
+            </div>
+          {/employee}
+        </script>
+        <h1>Context and path in Dust</h1>
+        <h3>The objects has two properties called "name" but one of them belongs to a child object so when displaying we change the context with . notation ( 2nd and 3rd rows )</h3>
+
+        <!-- This is the container where the templates will be instantiated -->
+        <div id="container3"></div>
+
+        <!-- ------------------------------------------ -->
+
+        <script type="text/x-template" id="itemTemplate4">
+          {#employees}
+            <div class="itemTemplateWrapper">
+            <div>{@math key="{$idx}" method="add" operand="1"/} of {$len}: {name}</div>
+              <div>{title}</div>
+              <div>{email}</div>
+              <div>{phone}</div>
+              {@select key="{fulltime}"}
+                {@eq value="true"}
+                  <div>Full-time employee</div>
+                {:else}
+                  <div>Part-time employee</div>
+                {/eq}
+              {/select}
+               <div> 
+              {#skills}
+              <span>{.}{@sep}, {/sep}</span>
+              {/skills}
+              </div>
+            </div>
+          {/employees}
+        </script>
+        <h1>Helpers in Dust</h1>
+        <h3>Math helper for indexing results, select helper for checking part-time||full-time, seperator helper for skills</h3>
+
+        <!-- This is the container where the templates will be instantiated -->
+        <div id="container4"></div>
+    </body>
+</html>
