@@ -1,0 +1,105 @@
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+body { background-color: #45180a; }
+
+.promo {
+	position: relative;
+	margin: 40px;
+	font-style: 16px;
+	font-family: "Indie Flower", cursive;
+}
+.promo video {
+	width: 100%;
+	border: 1px solid #fff;
+}
+
+/* videoyu full screen yapmak icin usttekini sil bunu ac ve .promo'daki position ozelligini de kaldir*/
+/*.promo video{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -10;
+}*/
+
+.promo img {
+	width: 160px;
+	position: absolute;
+	top : 20px;
+	left: 50%;
+	margin-left: -80px;
+}
+
+.promo .caption {
+	position: absolute;
+	left: .5px;
+	bottom: 60px;
+	background-color: rgba(69,24,10,.8);
+	width: 100%;
+}
+
+.promo .caption p {
+	font-size: 3em;
+	margin: 0;
+	padding: 10px 0px;
+	text-align: center;
+	color: #fff;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 700px){
+	.promo img {
+		top: 15px;
+		width: 120px;
+		margin-left: -60px;
+	}
+	.promo .caption p {
+		font-size: 2em;
+		line-height: 22px;
+		padding: 10px 0px;
+	}
+}
+
+@media screen and (max-width: 450px){
+	.promo {
+		margin: 15px;
+		padding: 175px 0px 40px 0px;
+		border: 1px solid #fff;
+		background: url(muffins.jpg) no-repeat center bottom;
+		background-size: cover;
+	}
+	.promo video {
+		display: none;
+	}
+	.promo img {
+		top: 15px;
+		width: 90px;
+		margin-left: -45px;
+	}
+	.promo .caption {
+		position: static;
+	}
+	.promo .caption p {
+		font-size: 1.4em;
+		line-height: 22px;
+		padding: 10px 0px;
+	}
+
+	.touch .promo {
+		min-height: inherit;
+	}
+}
+
+.touch .promo {
+	min-height: 500px;
+	border: 1px solid #fff;
+	background: url(muffins.jpg) no-repeat center bottom;
+	background-size: cover;
+}
+.touch .promo video {
+	display: none;
+}
