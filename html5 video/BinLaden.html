@@ -5,22 +5,16 @@
 		<title>Playing video</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-
 	<body>
-		<div class=".container">
-		    <h1></h1>
-		    
+		<div class="container">
 		    <!-- one way -->
 		    <!-- <video src="video/BinLaden.mp4" controls></video>  -->
-		    
 		    <!-- better way -->
 		    <video width="720" height="404" controls preload="metadata" poster="images/BinLaden.jpg"> 
 		    	<!-- giving info to browser about video. preload is ignored in mobile -->
 		    	<source src="video/BinLaden.mp4" type="video/mp4" />
 		    	<p>Your browser doesn't support HTML5</p> <!-- insert flash version here instead of this sentence -->
 		    </video>
-
-		
 		</div>
 	</body>
 </html>
