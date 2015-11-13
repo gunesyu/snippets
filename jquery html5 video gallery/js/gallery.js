@@ -17,7 +17,8 @@ $(function(){
 
 		var videoCode = '<video width="'+videoWidth+'" height="'+videoHeight+'" controls autoplay autobuffer>';
 		videoCode += '<source src="video/'+videoFile+'.mp4" type="video/mp4"></source>';
-		videoCode += '<source src="video/'+videoFile+'.ogv" type="video/ogg"></source></video>';
+		videoCode += '</video>';
+		console.dir(videoCode);
 		$("#videoPlayer").html(videoCode);
 
 		var checkBrowser = navigator.userAgent.toLowerCase();
@@ -27,15 +28,10 @@ $(function(){
 
 		if (isAndroid || isiPhone || isiPod) {
 			window.location = "video/"+videoFile+".mp4";
-		}/*else{
-			$.fancybox({
-				"transitionIn" : "fade",
-				"transitionOut" : "fade",
-				"overlayColor" : "#000",
-				"overlayOpacity" : ".6",
-				"href" : "#videoPlayer"
-			});
-		};*/
+		}else{
+			$("#videoPlayer").attr("style","display:block;");
+			console.log($("#videoPlayer").attr("style"))
+		};
 
 	});
 });
