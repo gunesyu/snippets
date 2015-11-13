@@ -28,6 +28,7 @@ a.videoLink {
 	cursor: pointer;
 	background: #555 no-repeat 0px 0px;
 	border: 1px solid #000;
+	overflow: hidden;
 }
 
 a.videoLink:hover {
@@ -38,13 +39,14 @@ a.videoLink img.play {
 	position: absolute;
 	top: 25px;
 	left: 75px;
+	opacity: .5;
 }
 
 a.videoLink div.caption {
 	position: absolute;
-	width: 180px;
-	bottom: 0px;
-	padding: 15px 10px 10px 10px;
+	width: 165px;
+	top: 116px;
+	padding: 20px 20px 15px 15px;
 	color: #fff;
 	background-color: rgba(0,0,0,.5);
 	font-family: Arial;

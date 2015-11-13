@@ -1,4 +1,18 @@
 $(function(){
+
+	$("a.videoLink").hover(
+		function(){
+			var captionPos = 85 - $(this).children(".caption").height();
+			var iconPos = captionPos - 32;
+
+			$(this).children(".caption").animate({ top : captionPos+"px" }, 250);
+			$(this).children("img.play").animate({ top : iconPos+"px", opacity : 1 }, 250);
+		},
+		function(){
+			$(this).children(".caption").animate({ top : "116px" }, 250);
+			$(this).children("img.play").animate({ top : "25px", opacity : .5 }, 250);
+		}
+	);
 	
 	$("a.videoLink").each(function(){
 		
