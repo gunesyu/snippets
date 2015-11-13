@@ -14,7 +14,7 @@ body {
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius :10px;
-	background: #000 url(images/filmstrip_tile.png) repeat-y 0px 0px;
+	background: #000 url(../images/filmstrip_tile.png) repeat-y 0px 0px;
 }
 
 a.videoLink {

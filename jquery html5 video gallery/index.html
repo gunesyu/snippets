@@ -2,28 +2,30 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 		<title>Gallery</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css">
-		<script type="text/javascript" src="jquery.fancybox-1.3.4/jquery-1.4.3.min.js"></script>
-		<script type="text/javascript" src="jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
-		<script type="text/javascript" src="gallery.js"></script>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+		<script type="text/javascript" src="includes/jquery-1.6.1.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css">
+		<script type="text/javascript" src="../lib/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="fancybox/jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+		<script type="text/javascript" src="js/gallery.js"></script>
 	</head>
 	<body>
 		<div class="video_gallery_container">
-			<a class="videoLink" href="" videoWidth="800" videoHeight="450" videoFile="cycling_large" videoCaption="Video Caption"></a>
-			<a class="videoLink" href="" videoWidth="640" videoHeight="360" videoFile="ocean_medium" videoCaption="Video Caption"></a>
-			<a class="videoLink" href="" videoWidth="400" videoHeight="250" videoFile="winecountry_part1" videoCaption="Video Caption"></a>
-			<a class="videoLink" href="" videoWidth="640" videoHeight="402" videoFile="winecountry_part2" videoCaption="Video Caption"></a>
-			<a class="videoLink" href="" videoWidth="860" videoHeight="540" videoFile="winecountry_part3" videoCaption="Video Caption"></a>
-			<a class="videoLink" href="" videoWidth="300" videoHeight="168" videoFile="cycling_small" videoCaption="Video Caption"></a>
+			<a class="videoLink" videowidth="800" videoheight="450" videofile="cycling_large"  videocaption="Caption for cycling_large goes here" ></a>
+			<a class="videoLink" videowidth="640" videoheight="360" videofile="ocean_medium" videocaption="Caption for ocean_medium goes here" ></a>
+			<a class="videoLink" videowidth="400" videoheight="250" videofile="winecountry_part1" videocaption="Caption for winecountry_part1 goes here"></a>
+			<a class="videoLink" videowidth="640" videoheight="402"  videofile="winecountry_part2" videocaption="Caption for winecountry_part2 goes here"></a>
+			<a class="videoLink" videowidth="860" videoheight="540" videofile="winecountry_part3" videocaption="Caption for winecountry_part3 goes here"></a>
+			<a class="videoLink" videowidth="300" videoheight="168" videofile="cycling_small"  videocaption="Caption for cycling_small goes here" ></a>
 			<div class="clear_both"></div>
 		</div>
-		<div style="dispay:none;">
-			<div id="videoPlayer">
 
-			</div>
+		<div style="display: none;">
+			<div id="videoPlayer"></div>
 		</div>
 		
 	</body>

@@ -10,10 +10,10 @@ $(function(){
 
 	$(".videoLink").click(function(){
 		
-		var videoFile = $(this).attr("videoFile");
-		var videoPoster = $(this).attr("videoFile");
-		var videoWidth = Number($(this).attr("videoWidth"));
-		var videoHeight = Number($(this).attr("videoHeight"));
+		var videoFile = $(this).attr("videofile");
+		var videoPoster = $(this).attr("videofile");
+		var videoWidth = Number($(this).attr("videowidth"));
+		var videoHeight = Number($(this).attr("videoheight"));
 
 		var videoCode = '<video width="'+videoWidth+'" height="'+videoHeight+'" controls autoplay autobuffer>';
 		videoCode += '<source src="video/'+videoFile+'.mp4" type="video/mp4"></source>';
@@ -27,7 +27,7 @@ $(function(){
 
 		if (isAndroid || isiPhone || isiPod) {
 			window.location = "video/"+videoFile+".mp4";
-		}else{
+		}/*else{
 			$.fancybox({
 				"transitionIn" : "fade",
 				"transitionOut" : "fade",
@@ -35,7 +35,7 @@ $(function(){
 				"overlayOpacity" : ".6",
 				"href" : "#videoPlayer"
 			});
-		};
+		};*/
 
 	});
 });
