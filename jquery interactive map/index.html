@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interactive Map with jQuery</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="../lib/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<div class="map_container">
+		<a class="dot" style="top:71px;left:236px;" continent="EU" city="London"></a>
+		<a class="dot" style="top:99px;left:113px;" continent="NA" city="Dallas"></a>
+		<a class="dot" style="top:83px;left:87px;" continent="NA" city="Seattle"></a>
+		<a class="dot" style="top:173px;left:387px;" continent="AU" city="Perth"></a>
+		<a class="dot" style="top:166px;left:182px;" continent="SA" city="RioDeJanerio"></a>
+		<a class="dot" style="top:102px;left:271px;" continent="AF" city="Tripoli"></a>
+		<a class="dot" style="top:134px;left:153px;" continent="SA" city="Bogota"></a>
+		<a class="dot" style="top:93px;left:141px;" continent="NA" city="NewYorkCity"></a>
+		<a class="dot" style="top:164px;left:277px;" continent="AF" city="Johannesburg"></a>
+		<a class="dot" style="top:115px;left:375px;" continent="AS" city="Phnompenh"></a>
+		<a class="dot" style="top:94px;left:412px;" continent="AS" city="Tokyo"></a>
+		<a class="dot" style="top:180px;left:427px;" continent="AU" city="Sydney"></a>
+		<a class="dot" style="top:89px;left:386px;" continent="AS" city="Tianjin"></a>
+		<a class="dot" style="top:195px;left:153px;" continent="SA" city="PuntaArenas"></a>
+		<a class="dot" style="top:96px;left:320px;" continent="ME" city="Buxoro"></a>
+		<a class="dot" style="top:113px;left:343px;" continent="ME" city="Anakapelle"></a>
+		<a class="dot" style="top:110px;left:299px;" continent="ME" city="Albahr"></a>
+		<a class="dot" style="top:84px;left:257px;" continent="EU" city="Rome"></a>
+		<a class="dot" style="top:76px;left:273px;" continent="EU" city="Warszawa"></a>
+
+		<form id="mapForm" name="mapForm" class="form_continent" method="post" action="">
+			<select name="continent" id="continent">
+				<option value="AF">Africa</option>
+				<option value="AS">Asia</option>
+				<option value="AU">Australia</option>
+				<option value="EU">Europe</option>
+				<option value="NA">North America</option>
+				<option value="ME">Middle East</option>
+				<option value="SA">South America</option>
+				<option value="ALL" selected="selected">Show All</option>
+			</select>
+		</form>
+		<div class="detail_container">
+			<div class="city_detail">
+				<h3>Choose a city</h3>
+				<p>Instructions</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

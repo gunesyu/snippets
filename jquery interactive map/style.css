@@ -1,0 +1,91 @@
+body {
+
+}
+
+.map_container {
+	background: rgba(105,86,105,.8);
+	height: 325px;
+	width: 760px;
+	position: relative;
+	color: #fff;
+	font-family: Arial;
+	font-size: 12px;
+	float: right;
+	margin: 0px 0px 0px 20px;
+}
+
+.map_container a.dot{
+	background: rgba(50,40,30,.9);
+	height: 15px;
+	width: 15px;
+	display: block;
+	cursor: pointer;
+	position: absolute;
+}
+
+.map_container a.dot:hover {
+	background: rgba(232,212,167,.9);
+}
+
+.map_container a.dot.selected {
+	background: rgba(121,165,199,.9);
+}
+
+.map_container .form_continent{
+	position: absolute;
+	top: 265px;
+	left: 30px;
+}
+
+.clear_both {
+	clear: both;
+}
+
+.map_container .detail_container {
+	position: absolute;
+	top: 35px;
+	left: 480px;
+	width: 240px;
+	height: 260px;
+}
+
+.map_container .city_detail {
+	position: absolute;
+	top: 0px;
+	width: 230px;
+	padding: 10px 0px 0px 12px;
+	border-left: 1px solid #a9b5c8;
+	border-top: 1px solid #a9b5c8;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+.map_container .city_detail .city_photo {
+	float: left;
+	margin: 0px 15px 0px 0px;
+	border: 1px solid #fff;
+	border-radius: 8px;
+	box-shadow: 0px 5px 3px #4e5d74;
+	-webkit-box-shadow: 0px 5px 3px #4e5d74;
+	-moz-box-shadow: 0px 5px 3px #4e5d74;
+	-webkit-border-radius: 8px;
+}
+
+.map_container h2 {
+	margin: 0px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.map_container h3 {
+	margin: 0px 0px 12px 0px;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	color: #2c3748;
+}
+
+.map_container p {
+	margin: 0px 0px 12px 0px;
+}
