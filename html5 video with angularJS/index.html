@@ -16,12 +16,13 @@
 	<script src="../lib/bootstrap.min.js"></script>
 	<script src="../lib/angular.min.js"></script>
 	<script src="../lib/angular-animate.min.js"></script>
+	<script src="js/app.js"></script>
 </head>
 <body ng-controller="VideoController">
 	<div id="fullPlayer" class="unselectable ng-cloak" ng-mousemove="mouseMoving($event)" ng-mouseup="dragStop($event)">
 		<div class="embed-responsive embed-responsive-16by9">
-			<video id="VideoElement" ng-click="togglePlay()" width="100%" height="100%" preload="metadata" poster="images/Carrot.jpg">
-				<source src="video/Carrot.mp4" type="video/mp4" />
+			<video id="VideoElement" ng-click="togglePlay()" width="100%" height="100%" preload="metadata" poster="{{videoPoster}}">
+				<source src="{{videoSource}}" type="video/mp4" />
 				<p>Your browser doesn't support HTML5</p>
 			</video>
 			<div id="bigPlayButton" ng-click="togglePlay()" ng-hide="videoPlaying" class="well" style="margin-top:{{vidHeightCenter}}px;margin-left:{{vidWidthCenter}}px;">
@@ -60,6 +61,6 @@
         </div>
 	</div>
 
-	<script src="js/app.js"></script>
+	
 </body>
 </html>

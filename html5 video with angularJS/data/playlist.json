@@ -2,21 +2,25 @@
 	{
 		"title":"Quagmire's Carrot Advices",
 		"path":"video/Carrot.mp4", 
+		"poster": "images/Carrot.jpg",
         "description":"Quagmire gives the secret of his young appearance to folks."
 	},
     {
-		"title":"Cow Eating Fence",
-		"path":"video/cow.mp4", 
+		"title":"Kfc",
+		"path":"video/Kfc.mp4", 
+		"poster": "",
         "description":"Engaging video of a cow eating a fence. Just... captivating, isn't it?"
 	},
     {
 		"title":"Razorpalm",
 		"path":"video/razorpalm.mp4", 
+		"poster": "",
         "description":"After Effects composition. Audio: Shivervein - Razorpalm"
 	},
     {
 		"title":"Ernesto",
 		"path":"video/ernesto.mp4", 
+		"poster": "",
         "description":"Hurricane Enesto - in the Carribean."
 	}
 ]

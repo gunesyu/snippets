@@ -1,9 +1,18 @@
 var videoApp = angular.module('videoApp', ['ngAnimate']);
 
 videoApp.controller('VideoController', ['$scope', '$window', '$interval', '$http', function($scope, $window, $interval, $http) {
+	
+
+	$http.get('data/playlist.json').success(function(data) {
+	    $scope.playlist = data;
+	});
+
 	$scope.videoDisplay = document.getElementById("VideoElement");
 	$scope.titleDisplay = "Quagmire's Carrot Advices";
 	$scope.videoDescription = "Quagmire gives the secret of his young appearance to folks.";
+	$scope.videoSource = "video/Carrot.mp4";
+	$scope.videoPoster = "images/Carrot.jpg";
+	$scope.videoDisplay.load($scope.videoSource);
 	$scope.videoPlaying = false;
 	$scope.currentTime;
     $scope.totalTime;
@@ -15,9 +24,7 @@ videoApp.controller('VideoController', ['$scope', '$window', '$interval', '$http
 	$scope.showOptions = false;
 	$scope.playlist;
 
-	$http.get('data/playlist.json').success(function(data) {
-	    $scope.playlist = data;
-	});
+
 
     $interval(function(){
     	if (!$scope.isDragging) {
@@ -101,6 +108,7 @@ videoApp.controller('VideoController', ['$scope', '$window', '$interval', '$http
 	    $scope.videoDescription = $scope.playlist[i].description;
 	    $scope.videoSource = $scope.playlist[i].path;
 	    $scope.videoDisplay.load($scope.videoSource);
+	    $scope.videoPoster = $scope.playlist[i].poster;
 	    $scope.videoPlaying = false;
 	    $('#playBtn').children("span").toggleClass("glyphicon-play", true);
 	    $('#playBtn').children("span").toggleClass("glyphicon-pause", false);
