@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Animated Bar Chart</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="../lib/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+	<p class="debug">
+		<span class="chartHeight">0</span></br>
+		<span class="maxValue">0</span></br>
+		<span class="valueMultiplier">0</span></br>
+		<span class="highestYLabel">0</span></br>
+		<span class="chartHeightArea">0</span></br>
+		<span class="chartScale">0</span></br>
+	</p>
+
+	<div class="chart-container">
+		<div class="chart-title">
+			<h2>Sales per Department &#151; Quarter 4</h2>
+			<p>Figures are in hundreds of $</p>
+		</div>
+		<div class="chart-content">
+			<div class="chart-y-axis">
+				<p style="top:0px;">1000</p>
+				<p style="bottom:0px;">0</p>
+			</div>
+			<div class="chart-area" bar-spacing="30">
+				<div bar-value="376" label="Sporting" class="chart-bar sporting"></div>
+				<div bar-value="621" label="Housewares" class="chart-bar housewares"></div>
+				<div bar-value="521" label="Shipping" class="chart-bar shipping"></div>
+				<div bar-value="832" label="Clothing" class="chart-bar clothing"></div>
+				<div bar-value="418" label="Jewelry" class="chart-bar jewelry"></div>
+			</div>
+			<div class="chart-x-axis"></div>
+		</div>
+	</div>
+</body>
+</html>
