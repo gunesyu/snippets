@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>jQuery Dropdown Menus</title>
+		<link rel="stylesheet" type="text/css" href="tooltip.css" />
+		<script type="text/javascript" src="../lib/jquery-2.1.4.min.js"></script>
+		<script type="text/javascript" src="tooltip.js"></script>
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="page">
+			<header>
+				<a class="logo tooltip" href="#" data-tip-type="text" data-tip-source="This is the logo."></a>
+			</header>
+			<article>
+				<h1>Heading</h1>
+				<aside>
+					<h2>Aside Heading</h2>
+					<p>Lorem ipsum dolor sit amet consectetur <a href="#" data-tip-type="html" data-tip-source="tooltip-sidebar" class="tooltip">HTML-based tooltip</a> adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+				</aside>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#" data-tip-type="text" data-tip-source="This is text for a tooltip." class="tooltip">text-based tooltip</a> laboris nisi ut aliquip consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<div class="clear-all"></div>
+			</article>
+			<footer>Your company name.</footer>
+			<div id="tooltip_container">This is my tooltip.</div>
+			<div class="tooltip_html_source">
+				<div id="tooltip-sidebar">
+					<img src="images/lynda.gif" style="float:left;" />This is a tip that has <strong><em style="color:#ffe19a;">HTML-formatted</em></strong> content, including an image.
+					<div class="clear-all"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
