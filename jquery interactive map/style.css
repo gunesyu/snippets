@@ -3,7 +3,7 @@ body {
 }
 
 .map_container {
-	background: rgba(105,86,105,.8);
+	background: url(images/map.jpg) no-repeat 0px 0px;
 	height: 325px;
 	width: 760px;
 	position: relative;
@@ -88,4 +88,8 @@ body {
 
 .map_container p {
 	margin: 0px 0px 12px 0px;
+}
+
+.city_detail_container {
+	display: none;
 }
