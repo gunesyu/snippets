@@ -98,6 +98,13 @@ main section {
 	top: 6em;
 }
 
+main p {
+	cursor: pointer;
+	border: 1px solid #000;
+	display: inline-block;
+	padding: .5em 1em;
+}
+
 @media all and (max-width: 500px) {
 	h2 {
 		padding-left: 10px;

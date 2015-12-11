@@ -181,3 +181,11 @@ function dragend(d){
 		nodes[arr[i]].fixed=true;
 	}
 }
+
+d3.select("p").on("click", function(){
+	var arr = d3.selectAll(".node").data();
+	for(var i=0;i<arr.length;i++){
+		arr[i].fixed=false;
+	}
+	console.log("unfix");
+})
