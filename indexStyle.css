@@ -67,10 +67,12 @@ main {
 }
 
 main #info {
+	display: none;
 	position: absolute;
 	margin: 0 auto;
 	padding: 0;
 	font-size: .8em;
+	top: 5em;
 	left: 85%;
 	width: 15%;
 	border-top: 1px solid #000;
@@ -98,11 +100,30 @@ main section {
 	top: 6em;
 }
 
-main p {
+main p#unfix {
 	cursor: pointer;
 	border: 1px solid #000;
 	display: inline-block;
 	padding: .5em 1em;
+}
+
+main p#unfix:hover {
+	color: #FFF;
+	background-color: #000;
+}
+
+main p#infoButton {
+	cursor: pointer;
+	position: absolute;
+	left: 97%;
+	border: 1px solid #000;
+	display: inline-block;
+	padding: .5em 1em;
+}
+
+main p#infoButton:hover {
+	color: #FFF;
+	background-color: #000;
 }
 
 @media all and (max-width: 500px) {

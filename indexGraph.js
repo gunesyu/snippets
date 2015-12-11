@@ -137,7 +137,7 @@ function initForce(){
 			.attr("fill",function(d){ return colors[d.level-1]; })
 			.on("mouseover", function(d){ d3.select(this).style("fill","#000"); })
 			.on("mouseout", function(d){ d3.select(this).style("fill",colors[d.level-1]); })//if(!d.fixed) d3.select(this).style("fill",colors[d.level-1]); else d3.select(this).style("fill", "#f00"); })
-			.on("click", function(d){ if(d.address !== undefined) window.location.assign(d.address); })
+			.on("click", function(d){ d3.select(this).style("fill",colors[d.level-1]); if(d.address !== undefined) window.location.assign(d.address); })
 			.on("dblclick", function(d){ d3.select(this).classed("fixed", d.fixed=false); })
 			.call(drag);
 
@@ -182,10 +182,15 @@ function dragend(d){
 	}
 }
 
-d3.select("p").on("click", function(){
+d3.select("#unfix").on("click", function(){
 	var arr = d3.selectAll(".node").data();
 	for(var i=0;i<arr.length;i++){
 		arr[i].fixed=false;
 	}
-	console.log("unfix");
-})
+});
+
+d3.select("#infoButton").on("mouseover", function(){
+		d3.select("#info").style("display", "block");
+	}).on("mouseout", function(){
+		d3.select("#info").style("display", "none");
+	});
