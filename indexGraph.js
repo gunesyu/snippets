@@ -99,7 +99,7 @@ var force;// = d3.layout.force().size([w,h]).charge(-400).linkDistance(40).on("t
 
 var drag;// = force.drag().on("dragstart", dragstart).on("dragend", dragend);
 
-var svg = d3.select("#chart").append("svg").attr("width", w).attr("height", h);// = d3.select("#chart").append("svg").attr("width", w).attr("height", h);
+var svg = d3.select("#chart").append("svg").attr("width", w).attr("height", h);
 
 var link;// = svg.selectAll(".link");
 var node;// = svg.selectAll(".node");
@@ -184,10 +184,21 @@ function dragend(d){
 
 d3.select("#unfix").on("click", function(){
 	var arr = d3.selectAll(".node").data();
+	force.stop();
+	for(var i=0;i<arr.length;i++){
+		arr[i].fixed=true;
+	}
 	for(var i=0;i<arr.length;i++){
 		arr[i].fixed=false;
 	}
+	force.resume();
 });
+
+/*d3.select("#reset").on("click", function(){
+	if(force){
+		console.log(force);
+	}
+});*/
 
 d3.select("#infoButton").on("mouseover", function(){
 		d3.select("#info").style("display", "block");

@@ -112,6 +112,18 @@ main p#unfix:hover {
 	background-color: #000;
 }
 
+main p#reset {
+	cursor: pointer;
+	border: 1px solid #000;
+	display: inline-block;
+	padding: .5em 1em;
+}
+
+main p#reset:hover {
+	color: #FFF;
+	background-color: #000;
+}
+
 main p#infoButton {
 	cursor: pointer;
 	position: absolute;
